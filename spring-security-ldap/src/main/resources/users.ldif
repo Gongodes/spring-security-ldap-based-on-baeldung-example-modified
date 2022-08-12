@@ -1,0 +1,31 @@
+dn: ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=example,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=baeldung,ou=people,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jim Beam
+sn: Beam
+uid: gonzalo
+userPassword: 1234
+
+dn: cn=admin,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: admin
+member: uid=baeldung,ou=people,dc=example,dc=com
+
+dn: cn=user,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: user
+member: uid=gonzalo,ou=people,dc=example,dc=com
